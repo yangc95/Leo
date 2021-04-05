@@ -24,7 +24,7 @@ In addition, this project will include
   
 ### Wireframes
 
-![image](https://user-images.githubusercontent.com/72277593/113520807-afe12180-9563-11eb-8e7c-20f65bfa4f7a.png)
+![LeoWireframe](https://user-images.githubusercontent.com/72277593/113536206-847e2700-95a3-11eb-9a26-7b30f5ba64a4.png)
 
 ### Archetecture and Technology
 
