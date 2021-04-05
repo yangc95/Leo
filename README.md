@@ -28,9 +28,9 @@ In addition, this project will include
 
 ### Archetecture and Technology
 
-  * JavaScript
+  * JavaScript - Animation
   * HTML
-  * CSS
+  * SCSS
 
 ### Implementation Timeline
 
