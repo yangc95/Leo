@@ -12,12 +12,12 @@ class Game {
         this.canvasHeight = canvasHeight;
         this.mapWidth = mapWidth;
         this.mapHeight = mapHeight;
-        this.map = new Map(this.mapWidth, this.mapHeight);
+        this.map = new Map(this.mapWidth, this.mapHeight, ctx);
         this.leo = new Leo(100, 100);
     }
 
     drawGame() {
-        
+
     }
 
 
