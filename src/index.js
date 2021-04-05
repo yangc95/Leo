@@ -1,3 +1,9 @@
 import "./styles/index.scss";
+import Game from './scripts/Game'
 
-// document.querySelector("#DOM-demo").addEventListener("click", startDOM);
+export function newGame() {
+    game = new Game();
+    document.getElementById('cat-cam');
+}
+
+let game = new Game();
