@@ -1,8 +1,12 @@
 # Leo
 
 ### Background and Overview
+Leo is a 2D Pixel RPG.
 
-Leo is a 2D Pixel RPG. 
+Leo is attending Cat Academy. But something's wrong! Leo's friend's, Polly the Pup and Huewert the Tabby are missing! 
+Shant the NPC appears...
+
+Shant can help you find your friends, but only after solving Shant's multiple choice question. Test your answering skills and bring back your friends!
 
 ### Functionality and MVP
 
