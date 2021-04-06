@@ -1,16 +1,15 @@
 import "./styles/index.scss";
-import Game from './scripts/Game'
+import Game from './scripts/game';
 
-const canvasEl = document.getElementById("mycanvas");
-canvasEl.width = 500;
-canvasEl.height = 500;
+// document.addEventListener("DOMContentLoaded", function () {
+    const canvasEl = document.getElementById("mycanvas");
+    canvasEl.width = 500;
+    canvasEl.height = 500;
 
-let ctx = canvasEl.getContext("2d");
-console.log(ctx);
-
-
-let mapWidth = 2000 * 2;
-let mapHeight = 2000 * 2;
+    const ctx = canvasEl.getContext("2d");
+    let game = new Game(canvasEl.width, canvasEl.height, ctx);
+    // new GameView(game, ctx).start();
+// });
 
 // export function newGame() {
 //     game = new Game(canvas.width, canvas.height, ctx);
@@ -18,15 +17,21 @@ let mapHeight = 2000 * 2;
 //     document.getElementById("end-div").style.visibility = "hidden";
 // }
 
-let game = new Game(canvasEl.width, canvasEl.height, mapWidth, mapHeight, ctx);
 
-// window.requestAnimationFrame(animate);
-// function animate() {
-//     ctx.imageSmoothingEnabled = false;
-//     ctx.clearRect(0, 0, canvas.width, canvas.height);
+// window.addEventListener("keydown", e => {
+//     keys[e.keyCode] = true; 
+// });
+// window.addEventListener("keyup", e => {
+//     delete keys[e.keyCode]; 
+// });
 
-//     game.updateGame()
-//     game.drawGame(ctx)
+function animate() {
+    ctx.imageSmoothingEnabled = false;
+    ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
 
-//     window.requestAnimationFrame(animate);
-// }
+    game.render(ctx)
+    game.rerender();
+
+    requestAnimationFrame(animate);
+}
+animate();

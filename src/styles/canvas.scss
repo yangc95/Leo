@@ -1,5 +1,9 @@
 canvas {
     border-radius: 5px;
     border: 1px solid white;
+    // image-rendering: -moz-crisp-edges;
+    // image-rendering: -webkit-crisp-edges;
+    // image-rendering: pixelated;
+    // image-rendering: crisp-edges;
 }
 

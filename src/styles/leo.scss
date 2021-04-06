@@ -1,5 +1,5 @@
 :root {
-    --pixel-size: 6;
+    --pixel-size: 4;
 }
 
 .Leo {
@@ -22,15 +22,15 @@
 }
 
 .trotLeft {
-    top: -150px;
+    top: -100px;
 }
 
 .trotDown {
-    top: -300px
+    top: -200px
 }
 
 .trotUp {
-    top: -450px;
+    top: -300px;
 }
 
 @keyframes moveLeo {
