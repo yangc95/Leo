@@ -3,8 +3,9 @@ import Game from './scripts/game';
 
 // document.addEventListener("DOMContentLoaded", function () {
     const canvasEl = document.getElementById("mycanvas");
-    canvasEl.width = 500;
-    canvasEl.height = 500;
+    const canvasDimension = 500;
+    canvasEl.width = canvasDimension;
+    canvasEl.height = canvasDimension;
 
     const ctx = canvasEl.getContext("2d");
     let game = new Game(canvasEl.width, canvasEl.height, ctx);
@@ -28,10 +29,8 @@ import Game from './scripts/game';
 function animate() {
     ctx.imageSmoothingEnabled = false;
     ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
-
-    game.render(ctx)
-    game.rerender();
-
+    game.draw(ctx)
+    game.render();
     requestAnimationFrame(animate);
 }
 animate();

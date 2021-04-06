@@ -9,7 +9,7 @@ class Leo {
         this.size = 100;
         this.dir = 0; // which key is held down
         this.trotting = 0;
-        this.speed = 0.1
+        this.speed = 0.1;
 
         this.right = false;
         this.left = false;
@@ -17,14 +17,14 @@ class Leo {
         this.up = false;
     }
 
-    renderLeo(ctx) { // render(ctx, width, height)
+    draw(ctx) { // render(ctx, width, height)
         // console.log("where the heck is leo")
         let spriteSize = this.size / 4;
         let trot = Math.floor(this.trotting % 4);
-        ctx.drawImage(this.leo, trot * spriteSize, this.dir * spriteSize, spriteSize, spriteSize, this.x - 50, this.y - 50, this.size, this.size);
+        ctx.drawImage(this.leo, trot * spriteSize, this.dir * spriteSize, spriteSize, spriteSize, 200, 200, this.size, this.size);
     }
 
-    moveLeo() {
+    render() {
         // const dir = dir[0];
         // if (dir) {
         //     if (this.right) { this.trotting += this.speed; }
@@ -42,15 +42,19 @@ class Leo {
         if (this.right) {
             this.dir = dir["right"];
             this.trotting += this.speed;
+            this.x += 3;
         } else if (this.left) {
             this.dir = dir["left"];
             this.trotting += this.speed;
+            this.x -= 3;
         } else if (this.down) {
             this.dir = dir["down"];
             this.trotting += this.speed;
+            this.y += 3;
         } else if (this.up) {
             this.dir = dir["up"];
             this.trotting += this.speed;
+            this.y -= 3;
         }
 
     }

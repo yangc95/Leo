@@ -11,21 +11,20 @@ class Game {
         this.leo = new Leo(canvasElWidth / 2, canvasElHeight / 2);
         new Util (this.leo, this);
 
-        this.leoDx = this.canvasElWidth/2 - this.leo.x
-        this.leoDy = this.canvasElHeight/2 - this.leo.y
     }
-
-    render(ctx) {
-        
-        this.map.renderMap(ctx);
+    
+    draw(ctx) {
+        this.map.draw(ctx);
         // debugger;
-        this.leo.renderLeo(ctx);
+        this.leo.draw(ctx);
         // ctx.drawImage()
     }
     
-    rerender() {
-        // this.map.rerender(this.leoDx, this.leoDy)
-        this.leo.moveLeo();
+    render() {
+        this.leoDx = this.canvasElWidth/2 - this.leo.x
+        this.leoDy = this.canvasElHeight/2 - this.leo.y
+        this.map.render(this.leoDx, this.leoDy);
+        this.leo.render();
     }
 
     won() {
