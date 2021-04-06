@@ -1,26 +1,40 @@
-import Map from './Map';
-import Leo from './Leo';
-
-const STORYPOINT = {
-    
-}
-
+import Map from './map';
+import Leo from './leo';
+import Util from './util';
 
 class Game {
-    constructor(canvasWidth, canvasHeight, mapWidth, mapHeight, ctx) {
-        this.canvasWidth = canvasWidth;
-        this.canvasHeight = canvasHeight;
-        this.mapWidth = mapWidth;
-        this.mapHeight = mapHeight;
-        this.map = new Map(this.mapWidth, this.mapHeight, ctx);
-        this.leo = new Leo(100, 100);
+    constructor(canvasElWidth, canvasElHeight, ctx) {
+        this.canvasElWidth = canvasElWidth;
+        this.canvasElHeight = canvasElHeight;
+        
+        this.map = new Map(canvasElWidth, canvasElHeight);
+        this.leo = new Leo(canvasElWidth / 2, canvasElHeight / 2);
+        new Util (this.leo, this);
+
+        this.leoDx = this.canvasElWidth/2 - this.leo.x
+        this.leoDy = this.canvasElHeight/2 - this.leo.y
     }
 
-    drawGame() {
+    render(ctx) {
+        
+        this.map.renderMap(ctx);
+        // debugger;
+        this.leo.renderLeo(ctx);
+        // ctx.drawImage()
+    }
+    
+    rerender() {
+        // this.map.rerender(this.leoDx, this.leoDy)
+        this.leo.moveLeo();
+    }
+
+    won() {
 
     }
 
+    lost() {
 
+    }
 }
 
 export default Game;
