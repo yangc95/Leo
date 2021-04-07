@@ -6,17 +6,25 @@ class Map {
         this.xPos = 0;
         this.yPos = 0;
         this.map = new Image();
-        this.map.src = "src/assets/images/map/mapPractice.png";
+        this.map.src = "src/assets/images/map/MainMap.png";
         // this.map.onload = () => ctx.drawImage(this.map, 0, 0, width, height)
     }
     
-    draw(ctx) {
+    draw(ctx, canvasElWidth, canvasElHeight) {
         let mapSize = this.width * this.magnify;
-        ctx.drawImage(this.map, 0, 0, this.map.width, this.map.height, this.xPos, this.yPos, mapSize, mapSize); //, 0, 0, mapSize, mapSize);
+        ctx.drawImage(
+            this.map, 
+            0, 0, 
+            this.map.width, 
+            this.map.height, 
+            // 0, 0,
+            -(this.map.width) + this.xPos, 
+            -(this.map.height) + this.yPos, 
+            mapSize, mapSize); //, 0, 0, mapSize, mapSize);
     }
 
     render(leoDx, leoDy) {
-        // if (this.xPos < 100) {
+        // if (this.xPos < 1250 && this.yPos < 1250) {
             this.xPos = leoDx;
             this.yPos = leoDy;
 
