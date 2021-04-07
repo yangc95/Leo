@@ -14,15 +14,19 @@ class Game {
     }
     
     draw(ctx) {
-        this.map.draw(ctx);
+        this.map.draw(
+            ctx, 
+            this.canvasElWidth, 
+            this.canvasElHeight
+        );
         // debugger;
         this.leo.draw(ctx);
         // ctx.drawImage()
     }
     
     render() {
-        this.leoDx = this.canvasElWidth/2 - this.leo.x
-        this.leoDy = this.canvasElHeight/2 - this.leo.y
+        this.leoDx = (this.canvasElWidth / 2) - this.leo.x
+        this.leoDy = (this.canvasElHeight / 2) - this.leo.y
         this.map.render(this.leoDx, this.leoDy);
         this.leo.render();
     }

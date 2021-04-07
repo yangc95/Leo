@@ -39,7 +39,7 @@ class Leo {
             "up": 3
         }
 
-        if (this.right) {
+        if (this.right && this.x < 1950) {
             this.dir = dir["right"];
             this.trotting += this.speed;
             this.x += 3;
