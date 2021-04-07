@@ -18,7 +18,6 @@ import Game from './scripts/game';
 //     document.getElementById("end-div").style.visibility = "hidden";
 // }
 
-
 // window.addEventListener("keydown", e => {
 //     keys[e.keyCode] = true; 
 // });

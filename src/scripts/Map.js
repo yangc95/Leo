@@ -6,7 +6,7 @@ class Map {
         this.xPos = 0;
         this.yPos = 0;
         this.map = new Image();
-        this.map.src = "src/assets/images/map/MainMap.png";
+        this.map.src = "src/assets/images/map/bgMap.png";
         // this.map.onload = () => ctx.drawImage(this.map, 0, 0, width, height)
     }
     
@@ -17,10 +17,9 @@ class Map {
             0, 0, 
             this.map.width, 
             this.map.height, 
-            // 0, 0,
             -(this.map.width) + this.xPos, 
             -(this.map.height) + this.yPos, 
-            mapSize, mapSize); //, 0, 0, mapSize, mapSize);
+            mapSize, mapSize);
     }
 
     render(leoDx, leoDy) {

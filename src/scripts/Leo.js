@@ -38,23 +38,27 @@ class Leo {
             "down": 2,
             "up": 3
         }
-
+        
         if (this.right && this.x < 1950) {
             this.dir = dir["right"];
             this.trotting += this.speed;
             this.x += 3;
-        } else if (this.left) {
+            // console.log("right"+this.x)
+        } else if (this.left && this.x > -460) {
             this.dir = dir["left"];
             this.trotting += this.speed;
             this.x -= 3;
-        } else if (this.down) {
+            // console.log("left"+this.x)
+        } else if (this.down && this.y < 1925) {
             this.dir = dir["down"];
             this.trotting += this.speed;
             this.y += 3;
-        } else if (this.up) {
+            // console.log("down"+this.y)
+        } else if (this.up && this.y > -500) {
             this.dir = dir["up"];
             this.trotting += this.speed;
             this.y -= 3;
+            // console.log("up"+this.y)
         }
 
     }
