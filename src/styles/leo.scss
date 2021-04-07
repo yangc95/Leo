@@ -1,43 +1,43 @@
-:root {
-    --pixel-size: 4;
-}
+// :root {
+//     --pixel-size: 4;
+// }
 
-.Leo {
-    width: calc(25px * var(--pixel-size));
-    height: calc(25px * var(--pixel-size));
-    overflow: hidden;
-    position: relative;
-    margin: 4em auto;
-    // background-color: aliceblue;
-}
+// .Leo {
+//     width: calc(25px * var(--pixel-size));
+//     height: calc(25px * var(--pixel-size));
+//     overflow: hidden;
+//     position: relative;
+//     margin: 4em auto;
+//     // background-color: aliceblue;
+// }
 
-.Leo_sprite {
-    animation: moveLeo 1s steps(4) infinite;
-    width: calc(100px * var(--pixel-size));
-    position: absolute;
-}
+// .Leo_sprite {
+//     animation: moveLeo 1s steps(4) infinite;
+//     width: calc(100px * var(--pixel-size));
+//     position: absolute;
+// }
 
-.pixelize {
-    image-rendering: pixelated;
-}
+// .pixelize {
+//     image-rendering: pixelated;
+// }
 
-.trotLeft {
-    top: -100px;
-}
+// .trotLeft {
+//     top: -100px;
+// }
 
-.trotDown {
-    top: -200px
-}
+// .trotDown {
+//     top: -200px
+// }
 
-.trotUp {
-    top: -300px;
-}
+// .trotUp {
+//     top: -300px;
+// }
 
-@keyframes moveLeo {
-    from {
-        transform: translate3d(0px,0,0)
-    }
-    to {
-        transform:translate3d(-100%,0,0)
-    }
-}
+// @keyframes moveLeo {
+//     from {
+//         transform: translate3d(0px,0,0)
+//     }
+//     to {
+//         transform:translate3d(-100%,0,0)
+//     }
+// }
