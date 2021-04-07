@@ -29,7 +29,7 @@ In addition, this project will include
 ### Archetecture and Technology
 
   * JavaScript - Animation
-  * HTML
+  * HTML - Canvas
   * SCSS
 
 ### Implementation Timeline
