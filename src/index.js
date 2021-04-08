@@ -8,6 +8,8 @@ import Game from './scripts/game';
     canvasEl.height = canvasDimension;
 
     const ctx = canvasEl.getContext("2d");
+    ctx.imageSmoothingEnabled = false;
+    
     let game = new Game(canvasEl.width, canvasEl.height, ctx);
     // new GameView(game, ctx).start();
 // });
@@ -24,12 +26,13 @@ import Game from './scripts/game';
 // window.addEventListener("keyup", e => {
 //     delete keys[e.keyCode]; 
 // });
+const STATUS = true;
 
 function animate() {
-    ctx.imageSmoothingEnabled = false;
     ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
     game.draw(ctx)
     game.render();
     requestAnimationFrame(animate);
+    console.log("hi")
 }
-animate();
+if (STATUS) animate();
