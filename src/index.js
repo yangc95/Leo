@@ -33,6 +33,5 @@ function animate() {
     game.draw(ctx)
     game.render();
     requestAnimationFrame(animate);
-    console.log("hi")
 }
 if (STATUS) animate();
