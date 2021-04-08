@@ -1,4 +1,5 @@
 import Map from './map';
+import MapElements from './map_elements';
 import Leo from './leo';
 import Util from './util';
 
@@ -9,7 +10,7 @@ class Game {
         this.map = new Map(canvasElWidth, canvasElHeight);
         this.leo = new Leo(canvasElWidth / 2, canvasElHeight / 2);
         new Util (this.leo, this);
-    }
+    };
     
     draw(ctx) {
         this.map.draw(

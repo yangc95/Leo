@@ -18,6 +18,28 @@ h1 {
     align-self: center;
 }
 
+.play-button {
+    position: absolute;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 2px solid black;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    outline: none;
+    display: block;
+}
+
+.play-button:hover {
+    // animation: 
+}
+@keyframes snap {
+    0% {
+        // transform: translateX(0px) ;
+    }
+    
+}
+
 footer.social-footer {
     padding: 1em;
     height: 6em;
