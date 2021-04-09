@@ -1,6 +1,7 @@
  class Util {
     constructor(leo, game) {
         document.addEventListener('keydown', e => {
+            e.preventDefault();
             switch (e.keyCode) {
                 case 39:
                    leo.right = true
@@ -18,6 +19,7 @@
         });
 
         document.addEventListener('keyup', e => {
+            e.preventDefault();
             switch (e.keyCode) {
                 case 39:
                     leo.right = false;
