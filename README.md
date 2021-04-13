@@ -26,7 +26,7 @@ In addition, this project will include
 
 ![LeoWireframe](https://user-images.githubusercontent.com/72277593/113536206-847e2700-95a3-11eb-9a26-7b30f5ba64a4.png)
 
-### Archi=tecture and Technology
+### Architecture and Technology
 
   * JavaScript - Animation
   * HTML - Canvas
