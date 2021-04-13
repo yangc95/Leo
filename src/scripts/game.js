@@ -22,9 +22,10 @@ class Game {
     }
     
     render() {
-        this.leoDx = (this.canvasElWidth / 2) - this.leo.x
-        this.leoDy = (this.canvasElHeight / 2) - this.leo.y
-        this.map.render(this.leoDx, this.leoDy);
+        let leoDx = (this.canvasElWidth / 2) - this.leo.x
+        let leoDy = (this.canvasElHeight / 2) - this.leo.y
+        // console.log(leoDx);
+        this.map.render(leoDx, leoDy);
         this.leo.render();
     }
 

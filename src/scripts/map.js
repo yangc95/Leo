@@ -28,9 +28,9 @@ class Map {
         );
 
         // console.log(this.xPos + "and" + this.yPos)
-        // if (this.xPos <= 525 && this.xPos >= -500 && this.yPos <= 750 && this.yPos >= -350) {
-        //     this.house.drawHewertsHouse(this.xPos, this.yPos);
-        // }
+        if (this.xPos <= 525 && this.xPos >= -500 && this.yPos <= 750 && this.yPos >= -350) {
+            this.house.drawHewertsHouse(this.width, this.height);
+        }
     }
 
     render(leoDx, leoDy) {

@@ -1,7 +1,8 @@
 class Houses {
-    constructor(xPos, yPos, ctx) {
+    constructor(xPos, yPos, magnify, ctx) {
         this.xPos = xPos;
         this.yPos = yPos;
+        this.magnify = magnify;
         this.ctx = ctx;
         this.xCollision = this.xPos - this.baseWidth;
         this.yCollision = this.yPos - this.baseHeight;
@@ -14,10 +15,10 @@ class Houses {
 
         const baseWidth = 80;
         const baseHeight = 120;
-        let leoDx = this.xPos + dx - this.baseWidth;
-        let leoDy = this.yPos + dy - this.baseHeight;
+        let leoDx = baseWidth;
+        let leoDy = baseHeight;
 
-        this.ctx.drawImage(pollysHouse, this.xPos, this.yPos, baseWidth * 5, baseHeight * 5);
+        // this.ctx.drawImage(pollysHouse, , 0, baseWidth * 5, baseHeight * 5);
     }
 
     drawHewertsHouse(dx, dy) {
@@ -26,10 +27,11 @@ class Houses {
 
         const baseWidth = 200;
         const baseHeight = 120;
-        let leoDx = this.xPos + dx - this.baseWidth;
-        let leoDy = this.yPos + dy - this.baseHeight;
+        let leoDx = this.xPos - baseWidth;
+        let leoDy = this.yPos - baseHeight;
 
-        this.ctx.drawImage(hewertsHouse, 0, 0, baseWidth, baseHeight, 0, 0, baseWidth * 5, baseHeight * 5);
+        // console.log(leoDy)
+        this.ctx.drawImage(hewertsHouse, 0, 0, baseWidth, baseHeight, dx, dy, baseWidth * 3, baseHeight * 3);
     }
 }
 
