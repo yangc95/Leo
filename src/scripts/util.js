@@ -1,4 +1,4 @@
- class Util {
+class Util {
     constructor(leo, game) {
         document.addEventListener('keydown', e => {
             e.preventDefault();

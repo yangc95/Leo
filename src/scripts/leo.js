@@ -22,7 +22,7 @@ class Leo {
         // console.log("where the heck is leo")
         let spriteSize = this.size / 4;
         let trot = Math.floor(this.trotting % 4);
-        this.ctx.drawImage(this.leo, trot * spriteSize, this.dir * spriteSize, spriteSize, spriteSize, 200, 200, this.size, this.size);
+        this.ctx.drawImage(this.leo, trot * spriteSize, this.dir * spriteSize, spriteSize, spriteSize, 200, 200, this.size, this.size);   
         // console.log(this.x + "-------" + this.y)
     }
 
