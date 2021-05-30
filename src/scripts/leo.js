@@ -1,11 +1,12 @@
 class Leo {
-    constructor(x, y) {
+    constructor(x, y, ctx) {
         this.leo = new Image();
         this.leo.src = "src/assets/images/sprite/LeoWalkCycle.png";
         // state of leo
         this.x = x;
         this.y = y;
-        
+        this.ctx = ctx;
+
         this.size = 100;
         this.dir = 0; // which key is held down
         this.trotting = 0;
@@ -17,11 +18,12 @@ class Leo {
         this.up = false;
     }
 
-    draw(ctx) { // render(ctx, width, height)
+    draw() { // render(ctx, width, height)
         // console.log("where the heck is leo")
         let spriteSize = this.size / 4;
         let trot = Math.floor(this.trotting % 4);
-        ctx.drawImage(this.leo, trot * spriteSize, this.dir * spriteSize, spriteSize, spriteSize, 200, 200, this.size, this.size);
+        this.ctx.drawImage(this.leo, trot * spriteSize, this.dir * spriteSize, spriteSize, spriteSize, 200, 200, this.size, this.size);   
+        // console.log(this.x + "-------" + this.y)
     }
 
     render() {
@@ -60,7 +62,6 @@ class Leo {
             this.y -= 3;
             // console.log("up"+this.y)
         }
-
     }
 }
 

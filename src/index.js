@@ -30,7 +30,7 @@ const STATUS = true;
 
 function animate() {
     ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
-    game.draw(ctx)
+    game.draw();
     game.render();
     requestAnimationFrame(animate);
 }
