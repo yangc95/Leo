@@ -1,12 +1,11 @@
-# Leo
+<h1><img src="https://user-images.githubusercontent.com/72277593/123187003-4d633780-d467-11eb-993a-861342f7fe76.png" width="50" height="50" align="center"/> Leo</h1>
+
+![GitHub repo size](https://img.shields.io/github/repo-size/yangc95/Leo?style=for-the-badge)
+![GitHub Issues](https://img.shields.io/github/issues/yangc95/Leo?style=for-the-badge)
 
 ### Background and Overview
-Leo is a 2D Pixel RPG.
-
-Leo is attending Cat Academy. But something's wrong! Leo's friend's, Polly the Pup and Huewert the Tabby are missing! 
-Shant the NPC appears...
-
-Shant can help you find your friends, but only after solving Shant's multiple choice question. Test your answering skills and bring back your friends!
+`Leo` is a 2D Pixel RPG. Leo is attending Cat Academy. But something's wrong! Leo's friend's, Polly the Pup and Huewert the Tabby are missing! 
+Shant the NPC appears... Shant can help you find your friends, but only after solving Shant's multiple choice question. Test your answering skills and bring back your friends!
 
 ### Architecture and Technology
 
@@ -14,15 +13,11 @@ Shant can help you find your friends, but only after solving Shant's multiple ch
   * HTML - Canvas
   * SCSS
 
-### Functionality and MVP
+### Map and Sprite graphics
 
-In `Leo`, users will be able to:
 
-  * use arrow keys to move Leo the cat around the map
-  * use spacebar to talk to a NPC
-  * use spacebar to chat with Leo's friends
-  * `User` must answer multiple choice questions from the NPC
-  
+
+
 In addition, this project will include
 
   * a beautiful pixel map
