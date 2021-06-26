@@ -1,18 +1,47 @@
 import "./styles/index.scss";
 import Game from './scripts/game';
 
-// document.addEventListener("DOMContentLoaded", function () {
-    const canvasEl = document.getElementById("mycanvas");
-    const canvasDimension = 500;
-    canvasEl.width = canvasDimension;
-    canvasEl.height = canvasDimension;
+document.addEventListener("DOMContentLoaded", () => {
+    const playButton = document.querySelector("play-button");
+    const restartButton = document.querySelector("restart-button");
 
+    const canvasEl = document.getElementById("mycanvas");
+    canvasEl.width = 500;
+    canvasEl.height = 500;
+    
     const ctx = canvasEl.getContext("2d");
     ctx.imageSmoothingEnabled = false;
     
-    let game = new Game(canvasEl.width, canvasEl.height, ctx);
+    const game = new Game(canvasEl.width, canvasEl.height, ctx);
     // new GameView(game, ctx).start();
-// });
+    
+    function animate() {
+        if (game.won() || game.lost()) {
+            window.cancelAnimationFrame(window.animationId);
+            return;
+        }
+        // list any other conditionals above
+            
+            ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
+            game.draw();
+            game.render();
+            requestAnimationFrame(animate);
+        }
+        
+    const STATUS = true;
+    if (STATUS) animate();
+
+    playButton.addEventListener('click', () => {
+      playButton.style.visibility = 'hidden';
+      game.start();
+      animloop();
+    });
+
+    restartButton.addEventListener('click', () => {
+      restart.Buttonstyle.visibility = 'visible';
+    });
+
+});
 
 // export function newGame() {
 //     game = new Game(canvas.width, canvas.height, ctx);
@@ -26,12 +55,3 @@ import Game from './scripts/game';
 // window.addEventListener("keyup", e => {
 //     delete keys[e.keyCode]; 
 // });
-const STATUS = true;
-
-function animate() {
-    ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
-    game.draw();
-    game.render();
-    requestAnimationFrame(animate);
-}
-if (STATUS) animate();

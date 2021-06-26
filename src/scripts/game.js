@@ -1,5 +1,6 @@
 import Map from './map';
 import Leo from './leo';
+import Story from './story';
 import Util from './util';
 
 class Game {
@@ -9,6 +10,7 @@ class Game {
         this.ctx = ctx;
         this.map = new Map(canvasElWidth, canvasElHeight, this.ctx);
         this.leo = new Leo(canvasElWidth / 2, canvasElHeight / 2, this.ctx);
+        this.story = new Story();
         new Util (this.leo, this);
     };
     

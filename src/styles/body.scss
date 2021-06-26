@@ -18,16 +18,32 @@ h1 {
     align-self: center;
 }
 
-.play-button {
-    position: absolute;
-    padding: 0.5em;
+#start-play {
+    margin: 1em;
+    padding: 2em;
     border-radius: 10px;
+    background-color: white;
     border: 2px solid black;
     top: 50%;
-    right: 50%;
-    transform: translate(50%, 50%);
-    outline: none;
-    display: block;
+    // right: 50%;
+    // transform: translate(50%, 50%);
+    width: 25em;
+    justify-content: center;
+    position: absolute;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    animation: start 3.5s steps(30, end);
+    
+    p {
+        position: sticky;
+
+    }
+    .play-button {
+
+    }
+
 }
 
 .play-button:hover {
@@ -38,4 +54,14 @@ h1 {
         // transform: translateX(0px) ;
     }
     
+}
+
+@keyframes start {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 45%;
+    }
 }
