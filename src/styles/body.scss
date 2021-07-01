@@ -20,28 +20,33 @@ h1 {
 
 #start-play {
     margin: 1em;
-    padding: 2em;
+    padding: 1.5em;
     border-radius: 10px;
     background-color: white;
     border: 2px solid black;
-    top: 50%;
+    top: 55%;
     // right: 50%;
     // transform: translate(50%, 50%);
     width: 25em;
-    justify-content: center;
+    height: 10%;
+    // justify-content: center;
+    // align-items: center;
     position: absolute;
     color: black;
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
+    gap: 0em;
     animation: start 3.5s steps(30, end);
     
     p {
+        // display: block;
         position: sticky;
+        white-space: pre-wrap;
+        overflow: hidden;
 
     }
     .play-button {
-
+        
     }
 
 }
@@ -51,17 +56,17 @@ h1 {
 }
 @keyframes snap {
     0% {
-        // transform: translateX(0px) ;
+        transform: translateX(0px) ;
     }
-    
 }
 
 @keyframes start {
     from {
         width: 0%;
+        
     }
 
     to {
-        width: 45%;
+        width: 25em;
     }
 }
