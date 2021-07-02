@@ -10,7 +10,7 @@ class Game {
         this.ctx = ctx;
         this.map = new Map(canvasElWidth, canvasElHeight, this.ctx);
         this.leo = new Leo(canvasElWidth / 2, canvasElHeight / 2, this.ctx);
-        this.story = new Story();
+        this.story = new Story(this.leo, this.map);
         new Util (this.leo, this);
     };
     
@@ -32,11 +32,12 @@ class Game {
     }
 
     won() {
-
+        // when all the story points are true (completed) 
+        // 
     }
 
     lost() {
-
+        // soft lose -> answering a question incorrectly
     }
 }
 

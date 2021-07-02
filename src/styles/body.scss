@@ -24,8 +24,7 @@ h1 {
     border-radius: 10px;
     background-color: white;
     border: 2px solid black;
-    top: 55%;
-    left: 22.5%;
+    transform: translate(2em, 21.5em);
     width: 22em;
     height: 10%;
     position: fixed;
@@ -41,6 +40,10 @@ h1 {
         overflow: hidden;
         opacity: 0;
     }
+
+    // need to figure out a way to automate these
+    // animations so that you can add as much story
+    // text?
     
     .one {
         animation: start 2s steps(30, end);
@@ -62,7 +65,6 @@ h1 {
     }
 
     .four {
-
         opacity: unset;
     }
 
