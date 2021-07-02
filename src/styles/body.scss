@@ -25,34 +25,54 @@ h1 {
     background-color: white;
     border: 2px solid black;
     top: 55%;
-    // right: 50%;
-    // transform: translate(50%, 50%);
-    width: 25em;
+    left: 22.5%;
+    width: 22em;
     height: 10%;
-    // justify-content: center;
-    // align-items: center;
-    position: absolute;
+    position: fixed;
     color: black;
     display: flex;
     flex-direction: column;
     gap: 0em;
-    animation: start 3.5s steps(30, end);
+    animation: start 2s steps(30, end);
     
     p {
-        // display: block;
         position: sticky;
-        white-space: pre-wrap;
+        white-space: nowrap;
         overflow: hidden;
-
+        opacity: 0;
     }
+    
+    .one {
+        animation: start 2s steps(30, end);
+        visibility: unset;
+        animation-fill-mode: forwards;
+    }
+
+    .two {
+        animation: start 2s steps(30, end);
+        animation-delay: 1.5s;
+        visibility: unset;
+        animation-fill-mode: forwards;
+    }
+
+    .three {
+        animation: start 2s steps(30, end);
+        animation-delay: 3.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .four {
+
+        opacity: unset;
+    }
+
     .play-button {
-        
+
     }
 
 }
 
 .play-button:hover {
-    // animation: 
 }
 @keyframes snap {
     0% {
@@ -63,10 +83,11 @@ h1 {
 @keyframes start {
     from {
         width: 0%;
-        
+        opacity: unset;
     }
 
     to {
-        width: 25em;
+        width: 22em;
+        opacity: unset;
     }
 }
