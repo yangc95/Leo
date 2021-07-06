@@ -2,23 +2,24 @@ import "./styles/index.scss";
 import Game from './scripts/game';
 
 document.addEventListener("DOMContentLoaded", () => {
-  const playButton = document.querySelector("play-button");
-  const restartButton = document.querySelector("restart-button");
+  const playButton = document.querySelector("a.play-button");
+  const restartButton = document.querySelector("a.restart-button");
 
   const canvasEl = document.getElementById("mycanvas");
+  const ctx = canvasEl.getContext("2d");
   canvasEl.width = 500;
   canvasEl.height = 500;
-  
-  const ctx = canvasEl.getContext("2d");
   ctx.imageSmoothingEnabled = false;
   
   const game = new Game(canvasEl.width, canvasEl.height, ctx);
   // new GameView(game, ctx).start();
   
   function animate() {
-    if (game.won() || game.lost()) {
-        window.cancelAnimationFrame(window.animationId);
-        return;
+    console.log('animate')
+    if (game.won()) {
+      window.cancelAnimationFrame(window.animationId);
+      game.restart();
+      return;
     }
     // list any other conditionals above
         
@@ -26,21 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
     game.draw();
     game.render();
     requestAnimationFrame(animate);
-    }
-      
-  const STATUS = true;
-  if (STATUS) animate();
+  }
+  // const STATUS = true;
+  // if (STATUS) animate();
 
   playButton.addEventListener('click', () => {
     playButton.style.visibility = 'hidden';
-    game.start();
-    animloop();
+    // game.start();
+    animate();
   });
 
   restartButton.addEventListener('click', () => {
     restart.Buttonstyle.visibility = 'visible';
   });
-
 });
 
 // export function newGame() {

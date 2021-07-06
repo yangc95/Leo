@@ -11,6 +11,7 @@ class Game {
         this.map = new Map(canvasElWidth, canvasElHeight, this.ctx);
         this.leo = new Leo(canvasElWidth / 2, canvasElHeight / 2, this.ctx);
         this.story = new Story(this.leo, this.map);
+        this.points = 0;
         new Util (this.leo, this);
     };
     
@@ -32,13 +33,22 @@ class Game {
     }
 
     won() {
-        // when all the story points are true (completed) 
-        // 
+        // when all the story points are true (completed)
+        if (this.story.storyline.foundHewert) {
+            return true;
+        }
+        return false;
     }
 
-    lost() {
-        // soft lose -> answering a question incorrectly
+    restart() {
+      this.points = 0;
+      this.story = new Story(this.leo, this.map);
     }
+
+    // lost() {
+        // soft lose -> answering a question incorrectly
+        // 
+    // }
 }
 
 export default Game;
