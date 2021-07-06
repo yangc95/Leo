@@ -9,29 +9,38 @@ body {
     width: max-content;
     color: white;
     background-color: rgb(31, 31, 31);
-    font-family: 'Questrial',sans-serif;
+    // font-family: 'Questrial',sans-serif;
+    font-family: monospace;
     display: flex;
     flex-direction: column;
 }
 
 h1 {
     align-self: center;
+    font-size: 30px;
+}
+
+a.play-button {
+    // opacity: unset;
+    position: fixed;
+    transform: translate(5.3em, 5em);
+    font-size: 40px;
+    text-decoration: none;
 }
 
 #start-play {
     margin: 1em;
-    padding: 1.5em;
+    padding: 2em;
     border-radius: 10px;
     background-color: white;
     border: 2px solid black;
-    transform: translate(2em, 21.5em);
+    transform: translate(5.2em, 25em);
     width: 22em;
-    height: 10%;
+    height: 6.5%;
     position: fixed;
     color: black;
     display: flex;
     flex-direction: column;
-    gap: 0em;
     animation: start 2s steps(30, end);
     
     p {
@@ -39,6 +48,7 @@ h1 {
         white-space: nowrap;
         overflow: hidden;
         opacity: 0;
+        font-size: 14px;
     }
 
     // need to figure out a way to automate these
@@ -60,18 +70,9 @@ h1 {
 
     .three {
         animation: start 2s steps(30, end);
-        animation-delay: 3.5s;
+        animation-delay: 3s;
         animation-fill-mode: forwards;
     }
-
-    .four {
-        opacity: unset;
-    }
-
-    .play-button {
-
-    }
-
 }
 
 .play-button:hover {

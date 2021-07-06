@@ -2,6 +2,7 @@ import "./styles/index.scss";
 import Game from './scripts/game';
 
 document.addEventListener("DOMContentLoaded", () => {
+  const instructions = document.querySelector("#start-play")
   const playButton = document.querySelector("a.play-button");
   const restartButton = document.querySelector("a.restart-button");
 
@@ -28,12 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     game.render();
     requestAnimationFrame(animate);
   }
-  // const STATUS = true;
-  // if (STATUS) animate();
 
   playButton.addEventListener('click', () => {
-    playButton.style.visibility = 'hidden';
-    // game.start();
+    playButton.style.visibility = 'hidden'
+    instructions.style.visibility = 'hidden';
     animate();
   });
 
