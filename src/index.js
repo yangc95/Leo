@@ -2,9 +2,11 @@ import "./styles/index.scss";
 import Game from './scripts/game';
 
 document.addEventListener("DOMContentLoaded", () => {
-  const instructions = document.querySelector("#start-play")
-  const playButton = document.querySelector("a.play-button");
-  const restartButton = document.querySelector("a.restart-button");
+  // comment back in
+  // const instructions = document.querySelector("#start-play")
+  // const playButton = document.querySelector("a.play-button");
+  // const restartButton = document.querySelector("a.restart-button");
+  // comment back in
 
   const canvasEl = document.getElementById("mycanvas");
   const ctx = canvasEl.getContext("2d");
@@ -30,15 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(animate);
   }
 
-  playButton.addEventListener('click', () => {
-    playButton.style.visibility = 'hidden'
-    instructions.style.visibility = 'hidden';
-    animate();
-  });
+  animate();
 
-  restartButton.addEventListener('click', () => {
-    restart.Buttonstyle.visibility = 'visible';
-  });
+  // comment back in
+  // playButton.addEventListener('click', () => {
+  //   playButton.style.visibility = 'hidden'
+  //   instructions.style.visibility = 'hidden';
+  //   animate();
+  // });
+
+  // restartButton.addEventListener('click', () => {
+  //   restart.Buttonstyle.visibility = 'visible';
+  // });
+  // comment back in
 });
 
 // export function newGame() {
