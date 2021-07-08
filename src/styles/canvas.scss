@@ -1,7 +1,10 @@
 canvas {
     border-radius: 5px;
     border: 1px solid white;
-    background-color: rgb(159, 244, 255);
+    // background-color: rgb(159, 244, 255);
+    background-image: url(../assets/images/map/cloudz.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
     // image-rendering: -moz-crisp-edges;
     // image-rendering: -webkit-crisp-edges;
     // image-rendering: pixelated;
