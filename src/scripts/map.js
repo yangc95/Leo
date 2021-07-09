@@ -11,7 +11,7 @@ class Map {
         this.yPos = 0;
         this.map = new Image();
         this.map.src = "src/assets/images/map/bgMap.png";
-        this.house = new Houses(this.xPos, this.yPos, this.magnify, this.ctx);
+        this.house = new Houses(this.ctx);
         // this.map.onload = () => ctx.drawImage(this.map, 0, 0, width, height)
     }
     

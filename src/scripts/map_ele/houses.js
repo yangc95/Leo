@@ -1,11 +1,6 @@
 class Houses {
-    constructor(xPos, yPos, magnify, ctx) {
-        this.xPos = xPos;
-        this.yPos = yPos;
-        this.magnify = magnify;
+    constructor(ctx) {
         this.ctx = ctx;
-        this.xCollision = this.xPos - this.baseWidth;
-        this.yCollision = this.yPos - this.baseHeight;
         this.house = new Image();
     }
 
@@ -27,8 +22,6 @@ class Houses {
 
         const baseWidth = 200;
         const baseHeight = 120;
-        // let leoDx = this.xPos - baseWidth;
-        // let leoDy = this.yPos - baseHeight;
 
         // console.log(leoDy)
 
