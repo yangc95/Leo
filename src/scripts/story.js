@@ -5,6 +5,7 @@ class Story {
         this.storyline = {
             // based on the point in the storyline, the map will change
             // map changes include what characters say and where they are located
+            spokeToShant: false,
             foundPolly: false, 
             foundHewert: false 
         };
