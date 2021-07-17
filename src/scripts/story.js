@@ -1,3 +1,8 @@
+import {
+    polly,
+    hewert
+} from './text';
+
 class Story {
     constructor(leo, map) {
         this.leo = leo;
@@ -18,7 +23,7 @@ class Story {
     }
 
     storylines () {
-        
+        // this.storyline.spokeToShant && ||
     }
 }
 
