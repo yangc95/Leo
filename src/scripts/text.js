@@ -42,44 +42,55 @@ const shant = {
 
 const grita = {
     0: [`You can call me Grita Kween!`],
-    1: [`Which represents an SQL full join?`,
-        ``
-        ``],
+    1: [`Which SQL statement inserts new data in a database?`,
+        `INSERT INTO`,
+        `INSERT NEW`],
     2: [`Martin Fowler once said,`, 
         `Good programmers write code that humans can understand.`],
-    3: [``] // some quote
+    3: [`It’s not a bug — it’s an undocumented feature`]
 }
 
 const catvin = {
-    0: [``], // some quote
-    1: [``,
-        ``
-        ``],
-    2: [``], // some quote
-    3: [``] // some quote
+    0: [`I don't like computer science jokes.`,
+        `...`,
+        `Not one bit`],
+    1: [`Which is true about React?`,
+        `It uses server-side rendering`, 
+        `It manipulates the real DOM`], // it uses the virtual DOM
+    2: [`Why did the programmer quit his job?`,
+        `...`,
+        `because he didn't get arrays`],
+    3: [`You had me at Hello World`]
 }
 
 // Han and Valeria are going to free Hewert
 
 const han = {
-    0: [`Han here!`], // some info
-    1: [``], // some info
-    2: [``,
-        ``,
-        ``],
-    3: [``] // some info
+    0: [`Han here!`],
+    1: [`To understand what recursion is, you must first understand recursion.`],
+    2: [`Is Javascript multi-threaded?`,
+        `Yes`, // no! it's single threaded with one call stack and one memory heap
+        `No`],
+    3: [`There is an easy way and a hard way.`,
+        `The hard part is finding the easy way.`]
 }
 
 const valeria = {
-    0: [`It's been a long time coming young grasshopper.`],
-    1: [``], // some advice
-    2: [``,
-        ``,
-        ``],
-    3: [``] // some advice
+    0: [`It's been a long time coming young cathopper.`],
+    1: [`The alternative to the ternary operation is to use the AND (&&) operation`],
+    2: [`Is ascending by selectors in CSS possible?`,
+        `Yes`,
+        `No`],
+    3: [`Learning how to test your code is a must!`]
 }
 
 export {
     polly,
-    hewert
+    hewert,
+    catthew,
+    shant,
+    grita,
+    catvin,
+    han,
+    valeria
 }
