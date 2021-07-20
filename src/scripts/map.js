@@ -1,5 +1,6 @@
 import Houses from './map_ele/houses';
-import Shrubs from './map_ele/shrubs';
+import Rooms from './map_ele/rooms';
+// import Shrubs from './map_ele/shrubs';
 
 class Map {
     constructor(width, height, ctx) {
@@ -12,6 +13,7 @@ class Map {
         this.map = new Image();
         this.map.src = "src/assets/images/map/bgMap.png";
         this.house = new Houses(this.ctx);
+        this.room = new Rooms(this.ctx, width * this.magnify, height * this.magnify)
         // this.map.onload = () => ctx.drawImage(this.map, 0, 0, width, height)
     }
     
@@ -39,6 +41,7 @@ class Map {
             this.yPos = leoDy;
 
         // }
+        // this.room.drawPollysRoom();
     }
 }
 

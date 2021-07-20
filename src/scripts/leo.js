@@ -19,11 +19,10 @@ class Leo {
     }
 
     draw() { // render(ctx, width, height)
-        // console.log("where the heck is leo")
         let spriteSize = this.size / 4;
         let trot = Math.floor(this.trotting % 4);
         this.ctx.drawImage(this.leo, trot * spriteSize, this.dir * spriteSize, spriteSize, spriteSize, 200, 200, this.size, this.size);   
-        // console.log(this.x + "-------" + this.y)
+        // console.log(`${this.x} and ${this.y}`)
     }
 
     render() {
@@ -34,6 +33,7 @@ class Leo {
         //     if (this.down) { this.trotting += this.speed; }
         //     if (this.up) { this.trotting -= this.speed; }      
         // }
+
         const dir = {
             "right": 0,
             "left": 1,
@@ -45,22 +45,18 @@ class Leo {
             this.dir = dir["right"];
             this.trotting += this.speed;
             this.x += 3;
-            // console.log("right"+this.x)
         } else if (this.left && this.x > -460) {
             this.dir = dir["left"];
             this.trotting += this.speed;
             this.x -= 3;
-            // console.log("left"+this.x)
         } else if (this.down && this.y < 1925) {
             this.dir = dir["down"];
             this.trotting += this.speed;
             this.y += 3;
-            // console.log("down"+this.y)
         } else if (this.up && this.y > -500) {
             this.dir = dir["up"];
             this.trotting += this.speed;
             this.y -= 3;
-            // console.log("up"+this.y)
         }
     }
 }
