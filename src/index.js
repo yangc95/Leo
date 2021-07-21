@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // new GameView(game, ctx).start();
   
   function animate() {
-    console.log('animate')
+    // console.log('animate')
     if (game.won()) {
       window.cancelAnimationFrame(window.animationId);
       game.restart();
