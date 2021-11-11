@@ -17,8 +17,7 @@ Shant the NPC appears... Shant can help you find your friends, but only after so
 
 ### Map and Sprite graphics
 
-
-
+  * [Inspo](https://pixelsandthings.tumblr.com/post/19705585946/darokin-pixel-art-mini-meow-animated-gif)
 
 In addition, this project will include
 
