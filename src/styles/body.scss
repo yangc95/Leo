@@ -9,7 +9,6 @@ body {
     width: max-content;
     color: white;
     background-color: rgb(31, 31, 31);
-    // font-family: 'Questrial',sans-serif;
     font-family: monospace;
     display: flex;
     flex-direction: column;
@@ -21,8 +20,6 @@ h1 {
 }
 
 a.play-button {
-    // opacity: unset;
-    // position: absolute;
     transform: translate(0, 7em);
     font-size: 40px;
     font-weight: bold;
@@ -76,27 +73,21 @@ a.play-button:hover {
         font-size: 14px;
     }
 
-    // need to figure out a way to automate these
-    // animations so that you can add as much story
-    // text?
-    
-    .one {
-        animation: start 2s steps(30, end);
-        visibility: unset;
-        animation-fill-mode: forwards;
-    }
+    $numberOfElements: 3;
+    $animationDuration: 2s;
+    $animationSteps: 30;
+    $animationDelayIncrement: 1.5s;
 
-    .two {
-        animation: start 2s steps(30, end);
-        animation-delay: 1.5s;
-        visibility: unset;
-        animation-fill-mode: forwards;
-    }
-    
-    .three {
-        animation: start 2s steps(30, end);
-        animation-delay: 3s;
-        animation-fill-mode: forwards;
+    @for $i from 1 through $numberOfElements {
+        $animationDelay: ($i - 1) * $animationDelayIncrement;
+        $className: unquote('.element#{$i}');
+
+            p#textline#{$className} {
+            animation: start #{$animationDuration} steps(#{$animationSteps}, end);
+            animation-delay: #{$animationDelay};
+            visibility: unset;
+            animation-fill-mode: forwards;
+        }
     }
 }
 
