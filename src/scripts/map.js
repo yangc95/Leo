@@ -12,7 +12,6 @@ class Map {
         this.map = new Image();
         this.map.src = "src/assets/images/map/bgMap.png";
         this.house = new Houses(this.xPos, this.yPos, this.magnify, this.ctx);
-        // this.map.onload = () => ctx.drawImage(this.map, 0, 0, width, height)
     }
     
     draw(ctx) {
@@ -22,23 +21,15 @@ class Map {
             0, 0, 
             this.map.width, 
             this.map.height, 
-            -(this.map.width) + this.xPos, 
-            -(this.map.height) + this.yPos, 
+            this.xPos - this.map.width, 
+            this.yPos - this.map.height, 
             mapSize, mapSize
         );
-
-        // console.log(this.xPos + "and" + this.yPos)
-        // if (this.xPos <= 525 && this.xPos >= -500 && this.yPos <= 750 && this.yPos >= -350) {
-        //     this.house.drawHewertsHouse(this.width, this.height);
-        // }
     }
 
     render(leoDx, leoDy) {
-        // if (this.xPos < 1250 && this.yPos < 1250) {
-            this.xPos = leoDx;
-            this.yPos = leoDy;
-
-        // }
+        this.xPos = leoDx;
+        this.yPos = leoDy;
     }
 }
 
