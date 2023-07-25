@@ -3,9 +3,9 @@ import Game from './scripts/game';
 
 document.addEventListener("DOMContentLoaded", () => {
   // comment back in
-  // const instructions = document.querySelector("#start-play")
-  // const playButton = document.querySelector("a.play-button");
-  // const restartButton = document.querySelector("a.restart-button");
+  const instructions = document.querySelector("#start-play")
+  const playButton = document.querySelector("a.play-button");
+  const restartButton = document.querySelector("a.restart-button");
   // comment back in
 
   const canvasEl = document.getElementById("mycanvas");
@@ -32,18 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(animate);
   }
 
-  animate();
+  // animate();
 
   // comment back in
-  // playButton.addEventListener('click', () => {
-  //   playButton.style.visibility = 'hidden'
-  //   instructions.style.visibility = 'hidden';
-  //   animate();
-  // });
+  playButton.addEventListener('click', () => {
+    playButton.style.visibility = 'hidden'
+    instructions.style.visibility = 'hidden';
+    animate();
+  });
 
-  // restartButton.addEventListener('click', () => {
-  //   restart.Buttonstyle.visibility = 'visible';
-  // });
+  restartButton.addEventListener('click', () => {
+    restart.Buttonstyle.visibility = 'visible';
+  });
   // comment back in
 });
 

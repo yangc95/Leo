@@ -10,7 +10,7 @@ class Leo {
         this.size = 100;
         this.dir = 0; // which key is held down
         this.trotting = 0;
-        this.speed = 0.1;
+        this.speed = 0.1; // would be cool to allow user to increase this
 
         this.right = false;
         this.left = false;

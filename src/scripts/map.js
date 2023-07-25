@@ -24,15 +24,15 @@ class Map {
             0, 0, 
             this.map.width, 
             this.map.height, 
-            -(this.map.width) + this.xPos, 
-            -(this.map.height) + this.yPos, 
+            this.xPos - this.map.width, 
+            this.yPos - this.map.height, 
             mapSize, mapSize
         );
 
         // console.log(this.xPos + "and" + this.yPos)
-        if (this.xPos <= 525 && this.xPos >= -500 && this.yPos <= 750 && this.yPos >= -350) {
-            this.house.drawHewertsHouse(this.xPos, this.yPos);
-        }
+        // if (this.xPos <= 525 && this.xPos >= -500 && this.yPos <= 750 && this.yPos >= -350) {
+            // this.house.drawHewertsHouse(this.xPos, this.yPos);
+        // }
     }
 
     render(leoDx, leoDy) {
