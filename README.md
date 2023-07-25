@@ -6,8 +6,7 @@
 [Leo Live Link](https://yangc95.github.io/Leo/)
 
 ### Background and Overview
-`Leo` is a 2D Pixel RPG. Leo is attending Cat Academy. But something's wrong! Leo's friend's, Polly the Pup and Huewert the Tabby are missing! 
-Shant the NPC appears... Shant can help you find your friends, but only after solving Shant's multiple choice question. Test your answering skills and bring back your friends!
+`Leo` is a 2D Pixel RPG. Leo is attending Cat Academy.
 
 ### Architecture and Technology
 
@@ -17,13 +16,11 @@ Shant the NPC appears... Shant can help you find your friends, but only after so
 
 ### Map and Sprite graphics
 
-  * All art made pixel-by-pixel with [Pixilart](https://www.pixilart.com/yangc/gallery) and [inspiration](https://pixelsandthings.tumblr.com/post/19705585946/darokin-pixel-art-mini-meow-animated-gif)
+* All art made pixel-by-pixel with [Pixilart](https://www.pixilart.com/yangc/gallery) and [inspiration](https://pixelsandthings.tumblr.com/post/19705585946/darokin-pixel-art-mini-meow-animated-gif)
 
-In addition, this project will include
+In addition, this project will include:
 
-  * a beautiful pixel map
-  * and beautiful pixel animals
-  
-### 
+  * A beautiful pixel map
+  * Beautiful pixel animals 
 
-Add screen capture here
+All made from scratch.
