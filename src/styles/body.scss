@@ -86,7 +86,7 @@ a.play-button:hover {
         $animationDelay: ($i - 1) * $animationDelayIncrement;
         $className: unquote('.element#{$i}');
 
-            p#textline#{$className} {
+        p#textline#{$className} {
             animation: start #{$animationDuration} steps(#{$animationSteps}, end);
             animation-delay: #{$animationDelay};
             visibility: unset;
@@ -95,8 +95,8 @@ a.play-button:hover {
     }
 }
 
-.play-button:hover {
-}
+// .play-button:hover {
+// }
 @keyframes snap {
     0% {
         transform: translateX(0px) ;
