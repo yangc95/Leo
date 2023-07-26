@@ -82,7 +82,7 @@ a.play-button:hover {
         $animationDelay: ($i - 1) * $animationDelayIncrement;
         $className: unquote('.element#{$i}');
 
-            p#textline#{$className} {
+        p#textline#{$className} {
             animation: start #{$animationDuration} steps(#{$animationSteps}, end);
             animation-delay: #{$animationDelay};
             visibility: unset;
